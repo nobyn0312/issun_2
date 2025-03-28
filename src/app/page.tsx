@@ -3,6 +3,7 @@ import { Secondary } from "@/stories/Button.stories";
 import Image from "next/image";
 import { describe } from "vitest";
 import { cn, getCustomColor } from "@/lib/utils";
+import { Input } from "@/components/ui/input";
 
 export default function Home() {
 	return (
@@ -37,6 +38,9 @@ export default function Home() {
 			>
 				Outline Button
 			</Button>
+
+			<p>Input</p>
+			<Input type='email' placeholder='Email' className='w-[220px]' />
 
 			<p>
 				shadcn--------------------------------------------------------------------
