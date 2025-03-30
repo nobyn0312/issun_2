@@ -1,9 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-
+	content: [
+		"./src/**/*.{js,jsx,ts,tsx}", // 使用するファイルのパスを指定
+	],
+	theme: {
+		extend: {
+			colors: {
+				"primary-orange": "#FF5E2A",
+			},
+		},
+	},
+	plugins: [],
+};

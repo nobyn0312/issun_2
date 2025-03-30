@@ -1,12 +1,12 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/Button/button";
 import { Secondary } from "@/stories/Button.stories";
 import Image from "next/image";
 import { describe } from "vitest";
 import { cn, getCustomColor } from "@/lib/utils";
-import { Input } from "@/components/ui/input";
+import { TextField } from "@/components/ui/TextField/text-field";
 import { Container } from "@/components/features/container";
-import { Card } from "@/components/features/card";
-
+import { ItemCard } from "@/components/shared/ItemCard/item-card";
+import itemImage from "@/assets/item_sample.png";
 export default function Home() {
 	return (
 		<>
@@ -44,15 +44,39 @@ export default function Home() {
 					</Button>
 				</div>
 
-				<p>Input</p>
-				<Input type='email' placeholder='Email' className='w-[220px]' />
-			</Container>
-			<p>Card</p>
+				<br />
+				<p>TextField</p>
 
-			<div style={{ display:"flex"}}>
-				<Card />
-				<Card />
-				<Card />
+				<TextField label='Email' type='email' placeholder='Email' />
+
+				<TextField label='Username' type='text' placeholder='name' />
+
+				<TextField label='Review' type='textarea' placeholder='' rows={5} />
+
+				<TextField label='password' type='password' placeholder='password' />
+			</Container>
+
+			<br />
+			<p>Card</p>
+			<div className='flex flex-wrap'>
+				<ItemCard
+					imageSrc='/images/item_sample.png'
+					brand='UNIQLO'
+					category='tops'
+					price={1980}
+				/>
+				<ItemCard
+					imageSrc='/images/item_sample.png'
+					brand='UNIQLO'
+					category='tops'
+					price={1980}
+				/>
+				<ItemCard
+					imageSrc='/images/item_sample.png'
+					brand='UNIQLO'
+					category='tops'
+					price={1980}
+				/>
 			</div>
 
 			{/* <Container>
