@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		"./src/**/*.{js,jsx,ts,tsx}", // 使用するファイルのパスを指定
+		"./src/**/*.{js,jsx,ts,tsx}",
+		"./components/**/*.{js,jsx,ts,tsx}",
+		"./pages/**/*.{js,jsx,ts,tsx}",
+		
 	],
 	theme: {
+		fontFamily: {
+			poppins: ["Poppins", "sans-serif"],
+		},
 		extend: {
 			colors: {
-				"primary-orange": "#FF5E2A",
+				"issun-orange": "#FF5E2A",
 			},
 		},
 	},
