@@ -43,7 +43,9 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 			<div className='px-2 py-2'>
 				<p className='text-xs font-bold'>{brand}</p>
 				<p className='text-xs'>{category}</p>
-				<p className='text-sm font-bold text-issun-orange'>{price}</p>
+				<p className='text-sm font-bold text-primary-orange!important'>
+					{price}ああ
+				</p>
 			</div>
 		</div>
 	);
