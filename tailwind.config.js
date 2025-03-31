@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,jsx,ts,tsx}"],
-  
+	content: [
+		"./src/**/*.{js,jsx,ts,tsx}", // ItemCard.tsx がここにある
+	],
 	theme: {
-		fontFamily: {
-			poppins: ["Poppins", "sans-serif"],
-		},
 		extend: {
 			colors: {
 				"primary-orange": "#FF5E2A",
