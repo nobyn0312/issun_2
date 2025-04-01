@@ -15,7 +15,7 @@ export default function Home() {
 					<p>ボタンコンポーネント</p>
 					<Button
 						className={cn(
-							"min-w-[220px] max-w-[220px] md:max-w-[280px] hover:bg-[#ffa789]",
+							"min-w-[220px] max-w-[220px] md:max-w-[280px] hover:bg-orange-400",
 							getCustomColor("brand-primary")
 						)}
 						style={{ display: "block" }}
@@ -57,47 +57,29 @@ export default function Home() {
 			</Container>
 
 			<br />
+			<Container>
+				<div className='flex flex-wrap'>
+					<ItemCard
+						imageSrc='/images/item_sample.png'
+						brand='UNIQLO'
+						category='tops'
+						price={1980}
+					/>
+					<ItemCard
+						imageSrc='/images/item_sample.png'
+						brand='UNIQLO'
+						category='tops'
+						price={1980}
+					/>
+					<ItemCard
+						imageSrc='/images/item_sample.png'
+						brand='UNIQLO'
+						category='tops'
+						price={1980}
+					/>
+				</div>
+			</Container>
 			<p>Card</p>
-			<div className='flex flex-wrap'>
-				<ItemCard
-					imageSrc='/images/item_sample.png'
-					brand='UNIQLO'
-					category='tops'
-					price={1980}
-				/>
-				<ItemCard
-					imageSrc='/images/item_sample.png'
-					brand='UNIQLO'
-					category='tops'
-					price={1980}
-				/>
-				<ItemCard
-					imageSrc='/images/item_sample.png'
-					brand='UNIQLO'
-					category='tops'
-					price={1980}
-				/>
-			</div>
-
-			{/* <Container>
-				<p>shadcn------------------------------------------</p>
-				<div className='font-bold'>Variant</div>
-				<div className='flex space-x-5'>
-					<Button>Default</Button>
-					<Button variant='destructive'>Destructive</Button>
-					<Button variant='outline'>Outline</Button>
-					<Button variant='secondary'>Secondary</Button>
-					<Button variant='ghost'>Ghost</Button>
-					<Button variant='link'>Link</Button>
-				</div>
-				<div className='font-bold'>Size</div>
-				<div className='flex space-x-5'>
-					<Button>Default</Button>
-					<Button size='sm'>Small</Button>
-					<Button size='lg'>Large</Button>
-					<Button size='icon'>Icon</Button>
-				</div>
-			</Container> */}
 		</>
 	);
 }
