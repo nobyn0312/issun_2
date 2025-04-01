@@ -8,9 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 // カスタムカラー用のユーティリティ
 export function getCustomColor(color: string) {
 const colorMap = {
-	"brand-primary": "bg-[#FF5E2A] text-white",
+	"brand-primary": "bg-orange-500 text-white",
 	"brand-secondary": "bg-[#333333] text-white",
-	"brand-outline": "border border-[#FF5E2A] bg-[#FFFFFF] text-[#FF5E2A]",
+	"brand-outline": "border border-orange-500 bg-white text-orange-500",
 };
   return colorMap[color as keyof typeof colorMap] || "";
 }
