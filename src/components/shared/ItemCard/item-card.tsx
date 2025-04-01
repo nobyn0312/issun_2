@@ -16,38 +16,28 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 	price,
 }) => {
 	return (
-		<div>
-			{/* <div
-				style={{
-					backgroundImage: `url(${imageSrc})`,
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-					width: "100%",
-					height: "auto",
-					aspectRatio: "250 / 375",
-					borderRadius: "8px",
-				}}
-			/> */}
-			<div>
+		<div
+			style={{
+				flex: "1 0 33.33%", // 1/3の幅を確保
+				maxWidth: "256px", // 768pxでの最大幅（768 ÷ 3）
+				width: "100%", // フルード対応
+			}}
+		>
+			<div
+				style={{ position: "relative", width: "100%", aspectRatio: "1 / 1" }}
+			>
 				<Image
 					src={imageSrc}
-					width={131}
-					height={161}
-					// style={{ objectFit: "contain" }}
 					alt='item'
-					// fill={true}
+					fill
 					style={{ objectFit: "cover" }}
+					sizes='(max-width: 768px) 33vw' // 画面幅の1/3
 				/>
 			</div>
-
 			<div className='px-2 py-2'>
 				<p className='text-xs font-bold'>{brand}</p>
 				<p className='text-xs'>{category}</p>
-				<p className='text-sm font-bold text-primary-orange'>{price}</p>
-				<p style={{ color: "#FF5E2A" }}>テスト</p>
-				<div>
-					<p className='text-primary-orange'>テスト</p>
-				</div>
+				<p className='text-sm font-bold text-orange-500'>{price}</p>
 			</div>
 		</div>
 	);
