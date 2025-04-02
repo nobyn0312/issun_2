@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface TextFieldProps extends React.ComponentProps<"input"> {
 	label: string;
@@ -23,7 +23,7 @@ export const TextField: React.FC<TextFieldProps> = ({
 	...props
 }) => {
 	return (
-		<div className="flex flex-col gap-1 max-w-[430px]">
+		<div className='flex flex-col gap-1 max-w-[430px]'>
 			<label htmlFor={id} className='text-sm font-medium text-foreground'>
 				{label}
 			</label>
@@ -45,7 +45,7 @@ export const TextField: React.FC<TextFieldProps> = ({
 					{...(props as React.ComponentProps<"textarea">)} // textarea用のpropsにキャスト
 				/>
 			) : (
-					// テキストフィールド */}
+				// テキストフィールド */}
 				<input
 					type={type}
 					id={id}

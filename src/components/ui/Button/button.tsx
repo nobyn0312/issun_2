@@ -28,7 +28,6 @@ const buttonVariants = cva(
 				icon: "size-9",
 			},
 			maxWidth: {
-				// 新しいバリアントを追加
 				narrow: "max-w-[200px]",
 				medium: "max-w-[300px]",
 				wide: "max-w-[400px]",
