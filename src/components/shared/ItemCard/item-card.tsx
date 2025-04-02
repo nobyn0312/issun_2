@@ -24,7 +24,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 			}}
 		>
 			<div
-				style={{ position: "relative", width: "100%", aspectRatio: "1 / 1" }}
+				style={{ position: "relative", width: "100%", aspectRatio: "1 / 1.3" }}
 			>
 				<Image
 					src={imageSrc}
