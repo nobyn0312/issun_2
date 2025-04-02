@@ -58,7 +58,7 @@ export default function Home() {
 
 			<br />
 			<Container>
-				<div className='flex flex-wrap'>
+				<div className='flex'>
 					<ItemCard
 						imageSrc='/images/item_sample.png'
 						brand='UNIQLO'
@@ -79,7 +79,6 @@ export default function Home() {
 					/>
 				</div>
 			</Container>
-			<p>Card</p>
 		</>
 	);
 }

@@ -18,9 +18,9 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 	return (
 		<div
 			style={{
-				flex: "1 0 33.33%", // 1/3の幅を確保
-				maxWidth: "256px", // 768pxでの最大幅（768 ÷ 3）
-				width: "100%", // フルード対応
+				flex: "1 0 33.33%",
+				maxWidth: "256px",
+				width: "100%",
 			}}
 		>
 			<div
