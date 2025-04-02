@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-
+import styles from "./itemcard.module.css";
 interface ItemCardProps {
 	imageSrc: string | StaticImageData;
 	brand: string;
@@ -16,25 +16,16 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 	price,
 }) => {
 	return (
-		<div
-			style={{
-				flex: "1 0 33.33%",
-				maxWidth: "256px",
-				width: "100%",
-			}}
-		>
-			<div
-				style={{ position: "relative", width: "100%", aspectRatio: "1 / 1.3" }}
-			>
+		<div className={styles.itemCard}>
+			<div className={styles.item}>
 				<Image
 					src={imageSrc}
 					alt='item'
 					fill
-					style={{ objectFit: "cover" }}
 					sizes='(max-width: 768px) 33vw' // 画面幅の1/3
 				/>
 			</div>
-			<div className='px-2 py-2'>
+			<div className='px-1 py-2'>
 				<p className='text-xs font-bold'>{brand}</p>
 				<p className='text-xs'>{category}</p>
 				<p className='text-sm font-bold text-orange-500'>{price}</p>
