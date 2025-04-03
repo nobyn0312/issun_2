@@ -1,15 +1,19 @@
+"use client"
+
 import { Button, buttonVariants } from "@/components/ui/Button/button";
 import { Secondary } from "@/stories/Button.stories";
-import Image from "next/image";
 import { describe } from "vitest";
 import { cn, getCustomColor } from "@/lib/utils";
 import { TextField } from "@/components/ui/TextField/text-field";
 import { Container } from "@/components/features/container";
 import { ItemCard } from "@/components/shared/ItemCard/item-card";
-import itemImage from "@/assets/item_sample.png";
+import { Header } from "@/components/shared/Header/header";
+import { Navigation } from "@/components/shared/Navigation/navigation";
+import { Textarea } from "@/components/ui/TextArea/textarea";
 export default function Home() {
 	return (
 		<>
+			<Header />
 			<Container>
 				<div className='space-y-5'>
 					<p>ボタンコンポーネント</p>
@@ -51,7 +55,8 @@ export default function Home() {
 
 				<TextField label='Username' type='text' placeholder='name' />
 
-				<TextField label='Review' type='textarea' placeholder='' rows={5} />
+				{/* <TextField label='Review' type='textarea' placeholder='' rows={5} /> */}
+				<Textarea />
 
 				<TextField label='password' type='password' placeholder='password' />
 			</Container>
@@ -78,7 +83,28 @@ export default function Home() {
 						price={1980}
 					/>
 				</div>
+				<div className='flex'>
+					<ItemCard
+						imageSrc='/images/item_sample.png'
+						brand='UNIQLO'
+						category='tops'
+						price={1980}
+					/>
+					<ItemCard
+						imageSrc='/images/item_sample.png'
+						brand='UNIQLO'
+						category='tops'
+						price={1980}
+					/>
+					<ItemCard
+						imageSrc='/images/item_sample.png'
+						brand='UNIQLO'
+						category='tops'
+						price={1980}
+					/>
+				</div>
 			</Container>
+			<Navigation/>
 		</>
 	);
 }
