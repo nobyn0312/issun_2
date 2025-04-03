@@ -15,6 +15,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 	category,
 	price,
 }) => {
+const priceInt = price.toLocaleString();
 	return (
 		<div className={styles.itemCard}>
 			<div className={styles.item}>
@@ -28,7 +29,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 			<div className='px-1 py-2'>
 				<p className='text-xs font-bold'>{brand}</p>
 				<p className='text-xs'>{category}</p>
-				<p className='text-sm font-bold text-orange-500'>{price}</p>
+				<p className='text-sm font-bold text-orange-500'>{priceInt}</p>
 			</div>
 		</div>
 	);
