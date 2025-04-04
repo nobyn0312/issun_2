@@ -49,21 +49,23 @@ export default function Home() {
 				</div>
 
 				<br />
-				<p>TextField</p>
-
+				<br />
 				<TextField label='Email' type='email' placeholder='Email' />
 
+				<br />
+
 				<TextField label='Username' type='text' placeholder='name' />
-
-				{/* <TextField label='Review' type='textarea' placeholder='' rows={5} /> */}
+				<br />
+				<p>textArea</p>
 				<Textarea />
-
+				<br />
 				<TextField label='password' type='password' placeholder='password' />
+				<br />
 			</Container>
 
 			<br />
 			<Container>
-				<div className='flex'>
+				<div className='flex justify-center'>
 					<ItemCard
 						imageSrc='/images/item_sample.png'
 						brand='UNIQLO'
@@ -104,7 +106,7 @@ export default function Home() {
 					/>
 				</div>
 			</Container>
-			<Navigation/>
+			<Navigation />
 		</>
 	);
 }

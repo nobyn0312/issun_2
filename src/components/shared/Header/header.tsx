@@ -5,7 +5,7 @@ import { Container } from '@/components/features/container';
 
 export const Header = () => {
   return (
-		<div>
+		<div className={"py-4"}>
 			<Container>
 				<Image
 					src={topLogo}
