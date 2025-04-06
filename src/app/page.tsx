@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Button, buttonVariants } from "@/components/ui/Button/button";
 import { Secondary } from "@/stories/Button.stories";
@@ -56,54 +56,26 @@ export default function Home() {
 
 				<TextField label='Username' type='text' placeholder='name' />
 				<br />
+				<TextField label='password' type='password' placeholder='password' />
+				<br />
+
 				<p>textArea</p>
 				<Textarea />
-				<br />
-				<TextField label='password' type='password' placeholder='password' />
 				<br />
 			</Container>
 
 			<br />
 			<Container>
-				<div className='flex justify-center'>
-					<ItemCard
-						imageSrc='/images/item_sample.png'
-						brand='UNIQLO'
-						category='tops'
-						price={1980}
-					/>
-					<ItemCard
-						imageSrc='/images/item_sample.png'
-						brand='UNIQLO'
-						category='tops'
-						price={1980}
-					/>
-					<ItemCard
-						imageSrc='/images/item_sample.png'
-						brand='UNIQLO'
-						category='tops'
-						price={1980}
-					/>
-				</div>
-				<div className='flex'>
-					<ItemCard
-						imageSrc='/images/item_sample.png'
-						brand='UNIQLO'
-						category='tops'
-						price={1980}
-					/>
-					<ItemCard
-						imageSrc='/images/item_sample.png'
-						brand='UNIQLO'
-						category='tops'
-						price={1980}
-					/>
-					<ItemCard
-						imageSrc='/images/item_sample.png'
-						brand='UNIQLO'
-						category='tops'
-						price={1980}
-					/>
+				<div className='flex flex-wrap justify-center'>
+					{[...Array(9)].map((_, i) => (
+						<ItemCard
+							imageSrc='/images/item_sample.png'
+							brand='UNIQLO'
+							category='tops'
+							price={1980}
+							key={i}
+						/>
+					))}
 				</div>
 			</Container>
 			<Navigation />
