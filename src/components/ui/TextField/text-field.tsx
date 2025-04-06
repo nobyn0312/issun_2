@@ -1,6 +1,6 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface TextFieldProps extends React.ComponentProps<"input"> {
 	label: string;
@@ -23,45 +23,25 @@ export const TextField: React.FC<TextFieldProps> = ({
 	...props
 }) => {
 	return (
-		<div className="flex flex-col gap-1 max-w-[430px]">
+		<div className='flex flex-col gap-1 max-w-[430px]'>
 			<label htmlFor={id} className='text-sm font-medium text-foreground'>
 				{label}
 			</label>
-			{/* テキストエリア */}
-			{type === "textarea" ? (
-				<textarea
-					id={id}
-					value={value}
-					placeholder={placeholder}
-					aria-invalid={error}
-					rows={rows}
-					className={cn(
-						"w-full min-w-0 rounded-md border border-input bg-white px-2 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-black resize-y",
-						error
-							? "border-destructive ring-destructive/20 dark:ring-destructive/40"
-							: "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-						className
-					)}
-					{...(props as React.ComponentProps<"textarea">)} // textarea用のpropsにキャスト
-				/>
-			) : (
-					// テキストフィールド */}
-				<input
-					type={type}
-					id={id}
-					value={value}
-					placeholder={placeholder}
-					aria-invalid={error}
-					className={cn(
-						"w-full min-w-0 rounded-md border border-input bg-white px-2 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-black",
-						error
-							? "border-destructive ring-destructive/20 dark:ring-destructive/40"
-							: "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-						className
-					)}
-					{...props}
-				/>
-			)}
+			<input
+				type={type}
+				id={id}
+				value={value}
+				placeholder={placeholder}
+				aria-invalid={error}
+				className={cn(
+					"w-full min-w-0 rounded-md border-2 border-gray-400 bg-white px-2 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-black",
+					error
+						? "border-destructive ring-destructive/20 dark:ring-destructive/40"
+						: "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+					className
+				)}
+				{...props}
+			/>
 		</div>
 	);
 };

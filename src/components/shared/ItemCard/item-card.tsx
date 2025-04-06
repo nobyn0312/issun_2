@@ -1,44 +1,41 @@
 import React from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-
+import styles from "./itemcard.module.css";
+import Link from "next/link";
 interface ItemCardProps {
-	imageSrc: string | StaticImageData;
+	imageSrc: string;
 	brand: string;
 	category: string;
 	price: number;
 }
-
-export const ItemCard: React.FC<ItemCardProps> = ({
+export const ItemCard = ({
 	imageSrc,
 	brand,
 	category,
 	price,
-}) => {
+}: ItemCardProps) => {
+	const priceInt = price.toLocaleString();
 	return (
-		<div
-			style={{
-				flex: "1 0 33.33%", // 1/3の幅を確保
-				maxWidth: "256px", // 768pxでの最大幅（768 ÷ 3）
-				width: "100%", // フルード対応
-			}}
-		>
-			<div
-				style={{ position: "relative", width: "100%", aspectRatio: "1 / 1.3" }}
-			>
-				<Image
-					src={imageSrc}
-					alt='item'
-					fill
-					style={{ objectFit: "cover" }}
-					sizes='(max-width: 768px) 33vw' // 画面幅の1/3
-				/>
+		<Link
+			href={"#"}
+			className='flex flex-col grow shrink-0 max-w-64 basis-[30vw] w-full'>
+			<div>
+				<div
+					className='relative w-full aspect-[1/1.3]'>
+					<Image
+						src={imageSrc}
+						alt='item'
+						fill
+						sizes='(max-width: 768px) 33vw'
+					/>
+				</div>
+				<div className='px-1 py-2'>
+					<p className='text-xs font-bold'>{brand}</p>
+					<p className='text-xs'>{category}</p>
+					<p className='text-sm font-bold text-orange-500'>{priceInt}</p>
+				</div>
 			</div>
-			<div className='px-2 py-2'>
-				<p className='text-xs font-bold'>{brand}</p>
-				<p className='text-xs'>{category}</p>
-				<p className='text-sm font-bold text-orange-500'>{price}</p>
-			</div>
-		</div>
+		</Link>
 	);
 };
