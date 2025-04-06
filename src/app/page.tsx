@@ -17,33 +17,13 @@ export default function Home() {
 			<Container>
 				<div className='space-y-5'>
 					<p>ボタンコンポーネント</p>
-					<Button
-						className={cn(
-							"min-w-[220px] max-w-[220px] md:max-w-[280px] hover:bg-orange-400",
-							getCustomColor("brand-primary")
-						)}
-						style={{ display: "block" }}
-					>
-						Primary Button
-					</Button>
+					<Button>Primary Button</Button>
 
-					<Button
-						className={cn(
-							"min-w-[220px] max-w-[220px] md:max-w-[280px] hover:bg-[#6b6b6b]",
-							getCustomColor("brand-secondary")
-						)}
-						style={{ display: "block" }}
-					>
+					<Button variant='secondary'>
 						Secondary Button
 					</Button>
 
-					<Button
-						className={cn(
-							"min-w-[220px] max-w-[220px] md:max-w-[280px] hover:bg-[#ffffff7b] hover:opacity-60",
-							getCustomColor("brand-outline")
-						)}
-						style={{ display: "block" }}
-					>
+					<Button variant='outline'>
 						Outline Button
 					</Button>
 				</div>
