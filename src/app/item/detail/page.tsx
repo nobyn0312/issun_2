@@ -18,7 +18,7 @@ const detail = () => {
 				/>
 
 				{/* 商品情報 */}
-				<div className='mt-4'>
+				<div className='mt-4 bg-orange-500 px-4 py-4 text-white rounded-md'>
 					<p className='text-sm text-gray-500'>BRAND: Uniqlo</p>
 					<h2 className='text-xl font-bold'>
 						エアリズムオーバーサイズコットンT
@@ -40,7 +40,7 @@ const detail = () => {
 				</div>
 
 				{/* レビュー */}
-				<div className='mt-6'>
+				<div className='mt-4 px-4 py-4 bg-gray-200 rounded-md'>
 					<p className='text-sm text-gray-500'>Minnano</p>
 					<p className='text-sm font-semibold'>Review</p>
 					<p className='text-sm'>reviewer：32</p>
@@ -62,9 +62,7 @@ const detail = () => {
 				<div className='mt-6 flex flex-col items-center'>
 					<p className='text-sm text-gray-500'>BRAND: Uniqlo</p>
 					<p className='text-sm'>エアリズムオーバーサイズコットンT</p>
-					<Button className='mt-2'>
-						販売元ページへ
-					</Button>
+					<Button className='mt-2'>販売元ページへ</Button>
 				</div>
 			</div>
 		</Container>
