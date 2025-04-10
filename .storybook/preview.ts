@@ -1,15 +1,20 @@
-import "../app/globals.css"
-import type { Preview } from "@storybook/react"
+// .storybook/main.ts
+import type { StorybookConfig } from "@storybook/react-vite";
 
-const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
-  },
-}
+const config: StorybookConfig = {
+	stories: ["../stories/**/*.mdx", "../stories/**/*.stories.@(js|jsx|ts|tsx)"],
+	addons: [
+		"@storybook/addon-links",
+		"@storybook/addon-essentials",
+		"@storybook/addon-interactions",
+	],
+	framework: {
+		name: "@storybook/react-vite",
+		options: {},
+	},
+	docs: {
+		autodocs: "tag",
+	},
+};
 
-export default preview
+export default config;
