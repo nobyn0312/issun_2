@@ -1,12 +1,21 @@
-import { Container } from '@/components/features/container';
-import { ContentsWrapper } from '@/components/shared/Wrapper/contents-wrapper';
+import { Container } from "@/components/features/container";
+import { ContentsWrapper } from "@/components/shared/Wrapper/contents-wrapper";
 
-import { Button } from '@/components/ui/Button/button';
-import Image from 'next/image';
-import React from 'react'
+import { Button } from "@/components/ui/Button/button";
+import Image from "next/image";
+import React, { useState } from "react";
 
-const detail = () => {
-  return (
+const Item = {
+	title: "エアリズムオーバーサイズコットンTシャツ",
+	detail:
+		"フォルムと着心地を極めた1枚。Uniqlo U\nコットンの見た目でサラリと快適な「エアリズム」。\nやや首元が詰まったクルーネックでクリーンな印象。-\nドロップショルダーでゆったとしたフィットの5袖。\nシルエットがきれいに出る素材感。フォルムと着心地を極めた1枚。",
+	price: 1980,
+	stock: 3,
+};
+
+const detail = ({ item = Item }) => {
+	const priceInt = item.price.toLocaleString();
+	return (
 		<Container>
 			<div className='max-w-md mx-auto'>
 				<Image
@@ -18,33 +27,25 @@ const detail = () => {
 				/>
 
 				<ContentsWrapper variant='orange' className='mb-4'>
-				<p className='text-sm font-bold'>BRAND: Uniqlo</p>
-				<h2 className='text-xl font-bold'>
-						エアリズムオーバーサイズコットンTシャツ
-					</h2>
+					<p className='text-sm font-bold'>BRAND: Uniqlo</p>
+					<h2 className='text-xl font-bold'>{Item.title}</h2>
 					<div className='mt-2'>
 						<p className='text-sm font-semibold'>PRICE</p>
-						<p className='text-lg font-bold'>¥1,980</p>
+						<p className='text-lg font-bold'>{priceInt}</p>
 					</div>
 					<div className='mt-2'>
 						<p className='text-sm font-semibold'>DETAIL</p>
-						<p className='text-sm'>
-							フォルムと着心地を極めた1枚。 Uniqlo U 仕様 -
-							コットンの見た目でサラリと快適な「エアリズム」。-
-							やや首元が詰まったクルーネックでクリーンな印象。-
-							ドロップショルダーでゆったりとしたフィットの5袖。-
-							シルエットがきれいに出る素材感。
-						</p>
-						</div>
+						<p className='text-sm'>{Item.detail}</p>
+					</div>
 				</ContentsWrapper>
 
 				<ContentsWrapper>
-				<p className='text-sm text-gray-500'>Minnano</p>
+					<p className='text-sm text-gray-500'>Minnano</p>
 					<p className='text-sm font-semibold'>Review</p>
 					<p className='text-sm'>reviewer：32</p>
 
 					<ContentsWrapper variant='white' className={"mb-2"}>
-							<p className='text-sm font-medium'>着丈ちょうどいい</p>
+						<p className='text-sm font-medium'>着丈ちょうどいい</p>
 						<p className='text-xs text-gray-500'>2024/09/09</p>
 						<p className='text-sm'>★★★★☆</p>
 						<p className='text-sm'>SIZE：M</p>
@@ -62,13 +63,10 @@ const detail = () => {
 						<p className='text-xs text-gray-500'>2024/09/09</p>
 						<p className='text-sm'>★★★★☆</p>
 						<p className='text-sm'>SIZE：M</p>
-						<p className='text-sm'>
-						良いです。
-						</p>
+						<p className='text-sm'>良いです。</p>
 						<p>チョロ松/男性/165cm/やや細身</p>
 					</ContentsWrapper>
 				</ContentsWrapper>
-
 
 				<div className='mt-6 flex flex-col items-center'>
 					<p className='text-sm text-gray-500'>BRAND: Uniqlo</p>
@@ -78,6 +76,6 @@ const detail = () => {
 			</div>
 		</Container>
 	);
-}
+};
 
-export default detail
+export default detail;
