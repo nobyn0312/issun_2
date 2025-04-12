@@ -1,5 +1,6 @@
 import { Container } from '@/components/features/container';
-import { ContentsBox } from '@/components/shared/Box/contents-box';
+import { ContentsWrapper } from '@/components/shared/Wrapper/contents-wrapper';
+
 import { Button } from '@/components/ui/Button/button';
 import Image from 'next/image';
 import React from 'react'
@@ -16,7 +17,7 @@ const detail = () => {
 					className='object-cover mx-auto block'
 				/>
 
-				<ContentsBox variant='orange'>
+				<ContentsWrapper variant='orange'>
 				<h2 className='text-xl font-bold'>
 						エアリズムオーバーサイズコットンTシャツ
 					</h2>
@@ -34,9 +35,9 @@ const detail = () => {
 							シルエットがきれいに出る素材感。
 						</p>
 						</div>
-				</ContentsBox>
+				</ContentsWrapper>
 
-				<ContentsBox variant='black'>
+				<ContentsWrapper variant='black'>
 					<div className='mt-2'>
 						<p className='text-sm font-semibold'>DETAIL</p>
 						<p className='text-sm'>
@@ -47,9 +48,9 @@ const detail = () => {
 							シルエットがきれいに出る素材感。
 						</p>
 						</div>
-				</ContentsBox>
+				</ContentsWrapper>
 
-				<ContentsBox variant='default'>
+				<ContentsWrapper variant='default'>
 					<div className='mt-2'>
 						<p className='text-sm font-semibold'>DETAIL</p>
 						<p className='text-sm'>
@@ -60,7 +61,7 @@ const detail = () => {
 							シルエットがきれいに出る素材感。
 						</p>
 						</div>
-				</ContentsBox>
+				</ContentsWrapper>
 
 				<div className='mt-4 bg-orange-500 px-4 py-4 text-white rounded-md'>
 					<p className='text-sm text-gray-500'>BRAND: Uniqlo</p>
