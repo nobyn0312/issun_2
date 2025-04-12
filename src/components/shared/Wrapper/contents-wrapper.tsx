@@ -11,6 +11,7 @@ const contentsWrapperVariants = cva(
 			default: "bg-gray-200 text-black",
 			orange: "bg-orange-500 text-white",
 			black: "bg-black text-white",
+			white: "bg-white text-black",
 		},
 	},
 	defaultVariants: {
