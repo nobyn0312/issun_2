@@ -44,8 +44,7 @@ const detail = () => {
 					<p className='text-sm'>reviewer：32</p>
 
 					<ContentsWrapper variant='white' className={"mb-2"}>
-					<div className='mt-2'>
-						<div className='text-sm font-medium'>着丈ちょうどいい</div>
+							<p className='text-sm font-medium'>着丈ちょうどいい</p>
 						<p className='text-xs text-gray-500'>2024/09/09</p>
 						<p className='text-sm'>★★★★☆</p>
 						<p className='text-sm'>SIZE：M</p>
@@ -56,21 +55,17 @@ const detail = () => {
 							洗濯してもシワになりづらく、お気に入りです
 						</p>
 						<p>一寸法師/男性/160cm/やや細身</p>
-					</div>
 					</ContentsWrapper>
 
 					<ContentsWrapper variant='white'>
-					<div className='mt-2'>
-						<div className='text-sm font-medium'>小さくても似合う神Tシャツ</div>
+						<p className='text-sm font-medium'>小さくても似合う神Tシャツ</p>
 						<p className='text-xs text-gray-500'>2024/09/09</p>
 						<p className='text-sm'>★★★★☆</p>
 						<p className='text-sm'>SIZE：M</p>
 						<p className='text-sm'>
 						良いです。
 						</p>
-
 						<p>チョロ松/男性/165cm/やや細身</p>
-					</div>
 					</ContentsWrapper>
 				</ContentsWrapper>
 
