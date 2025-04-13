@@ -7,7 +7,7 @@ type Props = {
 
 export const Container = ({ children, className = "" }: Props) => {
   const style = {
-    maxWidth: "960px",
+    maxWidth: "768px",
     margin: "0 auto",
     padding: "0 16px",
   };
