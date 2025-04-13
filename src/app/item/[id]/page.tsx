@@ -15,12 +15,12 @@ const Item = {
 const detail = () => {
 	return (
 		<>
-			<div className={"pb-12"}>
+			<div className='pb-12'>
 				<Container>
 					<div className='max-w-md mx-auto'>
-						<ItemDetail className={"mb-4"} />
-						<ReviewItem className={"mb-4"} />
-						<ItemLink className={"mb-4"} />
+						<ItemDetail className='mb-4' />
+						<ReviewItem className='mb-4' />
+						<ItemLink className='mb-4' />
 					</div>
 				</Container>
 			</div>
