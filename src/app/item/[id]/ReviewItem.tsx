@@ -1,6 +1,24 @@
 import { ContentsWrapper } from "@/components/shared/Wrapper/contents-wrapper";
 import React from "react";
 
+type Review = {
+	reviewer: string;
+	title: string;
+	date: Date;
+	rate: number;
+	size: string;
+	comment: string;
+	username: string;
+	sex: string;
+	height: string;
+	shape: string;
+};
+
+type Props = {
+	review: Review;
+	className?: string;
+};
+
 const ReviewCnt = {
 	reviewer: "32",
 	title: "着丈ちょうどいい",
@@ -14,12 +32,12 @@ const ReviewCnt = {
 	height: "165cm",
 	shape: "やや細身",
 };
-export const ReviewItem = ({ review = ReviewCnt }) => {
+export const ReviewItem = ({ review = ReviewCnt , className="" }) => {
 	const dateInt = review.date.toLocaleDateString("ja-JP");
 	const rateInt = "★".repeat(review.rate) + "☆".repeat(5 - review.rate);
 
 	return (
-		<>
+		<div className={className}>
 			<ContentsWrapper>
 				<p className='text-sm text-gray-500'>Minnano</p>
 				<p className='text-sm font-semibold'>Review</p>
@@ -35,6 +53,6 @@ export const ReviewItem = ({ review = ReviewCnt }) => {
 					</p>
 				</ContentsWrapper>
 			</ContentsWrapper>
-		</>
+		</div>
 	);
 };
