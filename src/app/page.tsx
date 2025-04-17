@@ -23,17 +23,15 @@ export default function Home() {
 				</Container>
 			</div> */}
 			<Container>
-				<div className='flex flex-wrap justify-center py-4 mb-10'>
-					{[...Array(9)].map((_, i) => (
-						<Link href="#">
-												<ItemCard
+				<div className='flex flex-wrap justify-center pb-14'>
+					{[...Array(24)].map((_, i) => (
+						<ItemCard
 							imageSrc='/images/item_sample.png'
 							brand='UNIQLO'
 							category='tops'
 							price={1980}
 							key={i}
 						/>
-						</Link>
 					))}
 				</div>
 			</Container>
