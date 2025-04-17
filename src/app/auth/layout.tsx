@@ -9,12 +9,12 @@ export default function AuthLayout({
 }) {
 	return (
 		<>
+			<div className='bg-gray-200 '>
+				<h1 className='text-xl font-bold text-center'>ISSUN</h1>
+			</div>
 			<Container>
-				<header className='mb-8'>
-					<h1 className='text-xl font-bold'>ISSUN</h1>
-				</header>
-				<div className='max-w-md mx-auto'>{children}
-				</div>
+				<header className='mb-8'></header>
+				<div className='max-w-md mx-auto'>{children}</div>
 			</Container>
 		</>
 	);
