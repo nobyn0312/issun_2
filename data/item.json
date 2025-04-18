@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 4,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 5,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 6,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 7,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	},
+	{
+		"id": 9,
+		"name": "Tシャツ",
+		"price": 2000,
+		"image": "/images/tshirt.jpg"
+	}
+]
