@@ -40,15 +40,12 @@ const ItemDetail = ({ item = Item, className = "" }) => {
 			/>
 			<ContentsWrapper variant='orange'>
 				<p className='text-sm font-bold'>BRAND: {item.brand}</p>
-				<h2 className='text-xl font-bold'>{item.title}</h2>
-				<div className='mt-2'>
+				<h2 className='text-xl font-bold mb-3'>{item.title}</h2>
 					<p className='text-sm font-semibold'>PRICE</p>
-					<p className='text-lg font-bold'>{priceInt}</p>
-				</div>
-				<div className='mt-2'>
-					<p className='text-sm font-semibold'>DETAIL</p>
-					<p className='text-sm'>{item.detail}</p>
-				</div>
+					<p className='text-lg mb-2 font-bold'>￥{priceInt}</p>
+					<hr className="mb-2" />
+					<p className='text-sm font-semibold mb-2'>DETAIL</p>
+					<p className='text-sm font-bold leading-relaxed'>{item.detail}</p>
 			</ContentsWrapper>
 		</div>
 	);
