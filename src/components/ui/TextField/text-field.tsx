@@ -38,7 +38,7 @@ export const TextField: React.FC<TextFieldProps> = ({
           error
             ? "border-destructive ring-destructive/20 dark:ring-destructive/40"
             : "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
-          className,
+          className
         )}
         {...props}
       />

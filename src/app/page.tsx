@@ -4,6 +4,7 @@ import { Button, buttonVariants } from "@/components/ui/Button/button";
 import { Container } from "@/components/features/container";
 import { ItemCard } from "@/components/shared/ItemCard/item-card";
 import { Navigation } from "@/components/shared/Navigation/navigation";
+import { Textarea } from "@/components/ui/TextArea/textarea";
 import Image from "next/image";
 import topLogo from "/public//images/topLogo.svg";
 import Link from "next/link";
@@ -11,17 +12,6 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<>
-			{/* <div className={"py-4"}>
-				<Container>
-					<Image
-						src={topLogo}
-						alt={"ロゴ"}
-						width={768}
-						height={768}
-						style={{ display: "block", margin: "0 auto" }}
-					/>
-				</Container>
-			</div> */}
 			<Container>
 				<div className='flex flex-wrap justify-center pb-14'>
 					{[...Array(24)].map((_, i) => (
