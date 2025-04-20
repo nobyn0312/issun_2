@@ -1,12 +1,14 @@
 "use client";
 
 import { Button, buttonVariants } from "@/components/ui/Button/button";
-import { TextField } from "@/components/ui/TextField/text-field";
 import { Container } from "@/components/features/container";
 import { ItemCard } from "@/components/shared/ItemCard/item-card";
-import { Header } from "@/components/shared/Header/header";
 import { Navigation } from "@/components/shared/Navigation/navigation";
 import { Textarea } from "@/components/ui/TextArea/textarea";
+import Image from "next/image";
+import topLogo from "/public//images/topLogo.svg";
+import Link from "next/link";
+
 export default function Home() {
 	return (
 		<>

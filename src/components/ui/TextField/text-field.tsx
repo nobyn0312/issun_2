@@ -3,7 +3,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 interface TextFieldProps extends React.ComponentProps<"input"> {
-  label: string;
+  label?: string;
   type: string;
   placeholder?: string;
   error?: boolean;

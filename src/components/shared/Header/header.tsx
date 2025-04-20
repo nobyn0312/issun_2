@@ -1,20 +1,8 @@
 import React from "react";
-import Image from "next/image";
-import topLogo from "/public//images/topLogo.svg";
-import { Container } from "@/components/features/container";
-
 export const Header = () => {
-  return (
-    <div className={"py-4"}>
-      <Container>
-        <Image
-          src={topLogo}
-          alt={"ロゴ"}
-          width={490}
-          height={490}
-          style={{ display: "block", margin: "0 auto" }}
-        />
-      </Container>
-    </div>
-  );
+	return (
+		<div className='bg-gray-200 '>
+		<h1 className='text-xl font-bold text-center'>ISSUN</h1>
+	</div>
+	);
 };
