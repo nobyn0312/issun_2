@@ -3,6 +3,7 @@ import { ReviewItem } from "./ReviewItem";
 import ItemDetail from "./ItemDetail";
 import ItemLink from "./ItemLink";
 import { Navigation } from "@/components/shared/Navigation/navigation";
+import { Header } from "@/components/shared/Header/header";
 
 const Item = {
 	title: "エアリズムオーバーサイズコットンTシャツ",
@@ -15,6 +16,7 @@ const Item = {
 const detail = () => {
 	return (
 		<>
+		<Header/>
 			<div className='pb-12'>
 				<Container>
 					<div className='max-w-md mx-auto'>

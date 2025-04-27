@@ -18,7 +18,6 @@ import {
 const page = () => {
   return (
     <>
-      <Container>
         <ContentsWrapper variant="default">
           <p className="text-sm font-bold">Review</p>
           <h2 className="text-xl font-bold mb-3">レビュー投稿</h2>
@@ -30,7 +29,7 @@ const page = () => {
               placeholder="名前"
               className="mb-2"
             ></TextField>
-            <div className="inner mb-8">
+            <div className="inner mb-2">
               <p>評価</p>
               <Select>
                 <SelectTrigger className="w-[180px]">
@@ -47,16 +46,17 @@ const page = () => {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-
-              <p>コメント</p>
-              <Textarea></Textarea>
             </div>
+            <p>レビュー</p>
+            <Textarea
+              placeholder="レビューを入力してください"
+              className="mb-8"
+            ></Textarea>
             <div className="flex align-middle justify-center">
               <Button variant="secondary">レビュー投稿</Button>
             </div>
           </form>
         </ContentsWrapper>
-      </Container>
     </>
   );
 };

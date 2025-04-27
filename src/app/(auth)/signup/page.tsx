@@ -33,7 +33,7 @@ export default function SignUpPage() {
       </ContentsWrapper>
       <div>
         <Link
-          href="/auth/login"
+          href="/signin"
           className="block border-b pb-[2px] text-sm text-center mx-auto my-0 w-fit"
         >
           すでにアカウントお持ちの方はこちら
