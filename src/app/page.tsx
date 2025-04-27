@@ -11,17 +11,6 @@ import Link from "next/link";
 export default function Home() {
 	return (
 		<>
-			{/* <div className={"py-4"}>
-				<Container>
-					<Image
-						src={topLogo}
-						alt={"ロゴ"}
-						width={768}
-						height={768}
-						style={{ display: "block", margin: "0 auto" }}
-					/>
-				</Container>
-			</div> */}
 			<Container>
 				<div className='flex flex-wrap justify-center pb-14'>
 					{[...Array(24)].map((_, i) => (
