@@ -1,5 +1,7 @@
 import type { Preview } from '@storybook/react';
-import '../app/globals.css'; // Tailwind CSS を含むグローバルスタイル
+import '../src/app/globals.css';
+
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -7,6 +9,9 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    nextjs: {
+      appDirectory: true, // Next.js App Router 対応
     },
   },
 };
