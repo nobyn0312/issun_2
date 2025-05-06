@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 const contentsWrapperVariants = cva("rounded-lg py-4", {
 	variants: {
 		variant: {
-			default: "bg-gray-200 text-black",
-			orange: "bg-orange-500 text-white",
-			black: "bg-black text-white",
-			white: "bg-white text-black",
+			default: "bg-gray-200 text-black rounded-lg",
+			orange: "bg-orange-500 text-white rounded-lg",
+			black: "bg-black text-white rounded-lg",
+			white: "bg-white text-black rounded-lg",
 		},
 		shadow: {
       none: "",
