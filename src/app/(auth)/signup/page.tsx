@@ -8,8 +8,9 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { postSignUp } from "@/issun";
-import { PostSignUpBody } from "@/issun";
+
+import { PostSignUpBody } from "@/api/generated/model.ts";
+
 import { useState } from "react";
 
 // バリデーションスキーマ（zod）
@@ -44,7 +45,7 @@ export default function SignUpPage() {
       password: data.password,
     };
     try {
-      const response = await postSignUp(signUpData);
+      const response = await PostSignUpBody(signUpData);
       console.log("会員登録成功:", response.data);
       // ログイン画面にリダイレクト
       window.location.href = "/signin";
