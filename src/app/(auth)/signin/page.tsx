@@ -8,9 +8,9 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { postSignIn } from "@/issun";
-import { PostSignInBody } from "@/issun";
 import { useState } from "react";
+import { PostSignInBody } from "../../../../generated/model";
+import { postSignIn } from "../../../../generated/api";
 
 // バリデーションスキーマ（zod）
 const signInSchema = z.object({
@@ -36,25 +36,45 @@ export default function SignInPage() {
 
 
   const onSubmit = async (data: SignInForm) => {
-    setError(null); // エラーをリセット
+    setError(null);
+
+    // ① CSRFトークンを取得
+    const csrfRes = await fetch("/api/csrf-token", {
+      credentials: "include", // Cookie を送信する場合（重要）
+    });
+
+    if (!csrfRes.ok) {
+      setError("CSRFトークンの取得に失敗しました");
+      return;
+    }
+
+    const { csrfToken } = await csrfRes.json();
+
+    // ② サインインデータの送信
     const signInData: PostSignInBody = {
       member: {
         email: data.email,
         password: data.password,
       },
     };
+
     try {
-      const response = await postSignIn(signInData);
+      const response = await postSignIn(signInData, {
+        headers: {
+          "X-CSRF-Token": csrfToken, // CSRFトークンを送信
+        },
+        withCredentials: true, // Cookie を含める
+      });
+
       console.log("ログイン:", response.data);
-      // ホームページにリダイレクト
       window.location.href = "/";
-      
     } catch (err: any) {
       console.log("エラー:", err.response?.data);
       setError(err.response?.data?.message || "ログインに失敗しました");
     }
   };
 
+  
   return (
     <Container>
       <ContentsWrapper variant="orange" className="mb-4">
