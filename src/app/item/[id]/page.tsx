@@ -1,9 +1,12 @@
+"use client";
+
 import { Container } from "@/components/features/container";
 import { ReviewItem } from "./ReviewItem";
 import ItemDetail from "./ItemDetail";
 import ItemLink from "./ItemLink";
 import { Navigation } from "@/components/shared/Navigation/navigation";
 import { Header } from "@/components/shared/Header/header";
+import { Button } from "@/components/ui/Button/button";
 
 const Item = {
 	title: "エアリズムオーバーサイズコットンTシャツ",
@@ -21,6 +24,8 @@ const detail = () => {
 				<Container>
 					<div className='max-w-md mx-auto'>
 						<ItemDetail className='mb-4' />
+						<Button className='mx-auto mb-4' size={"lg"}>カートに入れる</Button>
+						<Button className='mx-auto mb-4' variant={"outline"} size={"default"}>お気に入り</Button>
 						<ReviewItem className='mb-4' />
 						<ItemLink className='mb-4' />
 					</div>
