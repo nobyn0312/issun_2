@@ -73,10 +73,8 @@ export const postSignUp = <TData = AxiosResponse<void>>(
 export const postSignIn = <TData = AxiosResponse<void>>(
     postSignInBody: PostSignInBody, options?: AxiosRequestConfig
  ): Promise<TData> => {
-    return axios.post(
-      `/sign_in`,
-      postSignInBody,options
-    );
+  return axios.post("http://localhost:8000/signin", postSignInBody, options);
+
   }
 
 /**

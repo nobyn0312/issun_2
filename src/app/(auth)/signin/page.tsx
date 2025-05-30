@@ -29,7 +29,7 @@ export default function SignInPage() {
 
   const handleLogin = async () => {
     const res = await postSignIn({
-      email: "xtest1@example.com",
+      email: "test1@example.com",
       password: "Test1111"
     });
 }
