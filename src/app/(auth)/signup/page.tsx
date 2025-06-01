@@ -8,25 +8,24 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import { PostSignUpBody } from "@/api/generated/model.ts";
-
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { PostSignUpBody } from "../../../../generated/model";
+import { postSignUp } from "../../../../generated/api";
 
-// バリデーションスキーマ（zod）
+// バリデーションスキーマ
 const signUpSchema = z.object({
   username: z.string().min(3, "名前は3文字以上で入力してください"),
   email: z.string().email("有効なメールアドレスを入力してください"),
   password: z.string().min(6, "パスワードは6文字以上で入力してください"),
 });
 
-// フォームデータの型
 type SignUpForm = z.infer<typeof signUpSchema>;
 
 export default function SignUpPage() {
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
-  // react-hook-formのセットアップ
   const {
     register,
     handleSubmit,
@@ -36,19 +35,19 @@ export default function SignUpPage() {
     resolver: zodResolver(signUpSchema),
   });
 
-  // フォーム送信時の処理
   const onSubmit = async (data: SignUpForm) => {
-    setError(null); // エラーをリセット
+    setError(null);
     const signUpData: PostSignUpBody = {
-      username: data.username,
-      email: data.email,
-      password: data.password,
+      user: {
+        // Railsのparams構造に合わせる
+        username: data.username,
+        email: data.email,
+        password: data.password,
+      },
     };
     try {
-      const response = await PostSignUpBody(signUpData);
-      console.log("会員登録成功:", response.data);
-      // ログイン画面にリダイレクト
-      window.location.href = "/signin";
+      await postSignUp(signUpData); // 正しい関数名
+      router.push("/signin"); // useRouterでリダイレクト
     } catch (err: any) {
       setError(err.response?.data?.message || "会員登録に失敗しました");
     }

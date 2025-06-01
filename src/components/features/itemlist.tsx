@@ -21,7 +21,7 @@ export const ItemList: React.FC = () => {
     const fetchItems = async () => {
       try {
         const res = await fetch(
-          "https://rails-ec-rest-api.onrender.com/api/v1/members/items?page=1"
+           "http://localhost:3001/api/v1/members/items?page=1"
         );
         if (!res.ok) throw new Error("データの取得に失敗しました");
         const data = await res.json();

@@ -68,9 +68,9 @@ export const getPostPurchasesResponseMock = (overrideResponse: Partial< PostPurc
 
 export const getGetCsrfMockHandler = (overrideResponse?: GetCsrf200 | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<GetCsrf200> | GetCsrf200)) => {
   return http.get('*/csrf', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetCsrfResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -79,11 +79,11 @@ export const getGetCsrfMockHandler = (overrideResponse?: GetCsrf200 | ((info: Pa
 }
 
 export const getPostSignUpMockHandler = (overrideResponse?: void | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<void> | void)) => {
-  return http.post('*/sign_up', async (info) => {await delay(1000);
+  return http.post('*/signup', async (info) => {await delay(1000);
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
@@ -93,16 +93,16 @@ export const getPostSignInMockHandler = (overrideResponse?: void | ((info: Param
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 200,
-        
+
       })
   })
 }
 
 export const getDeleteSignOutMockHandler = (overrideResponse?: DeleteSignOut200 | ((info: Parameters<Parameters<typeof http.delete>[1]>[0]) => Promise<DeleteSignOut200> | DeleteSignOut200)) => {
   return http.delete('*/sign_out', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getDeleteSignOutResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -112,9 +112,9 @@ export const getDeleteSignOutMockHandler = (overrideResponse?: DeleteSignOut200 
 
 export const getGetIdentityMockHandler = (overrideResponse?: Member | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<Member> | Member)) => {
   return http.get('*/identity', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetIdentityResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -127,16 +127,16 @@ export const getPatchProfileMockHandler = (overrideResponse?: void | ((info: Par
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
 
 export const getGetShippingInfoMockHandler = (overrideResponse?: ShippingInfo[] | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ShippingInfo[]> | ShippingInfo[])) => {
   return http.get('*/shipping_info', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetShippingInfoResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -149,16 +149,16 @@ export const getPostShippingInfoMockHandler = (overrideResponse?: void | ((info:
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
 
 export const getGetShippingInfoIdMockHandler = (overrideResponse?: ShippingInfo | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ShippingInfo> | ShippingInfo)) => {
   return http.get('*/shipping_info/:id', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetShippingInfoIdResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -171,7 +171,7 @@ export const getPatchShippingInfoIdMockHandler = (overrideResponse?: void | ((in
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
@@ -181,16 +181,16 @@ export const getDeleteShippingInfoIdMockHandler = (overrideResponse?: void | ((i
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
 
 export const getGetShopsMockHandler = (overrideResponse?: GetShops200 | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<GetShops200> | GetShops200)) => {
   return http.get('*/shops', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetShopsResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -200,9 +200,9 @@ export const getGetShopsMockHandler = (overrideResponse?: GetShops200 | ((info: 
 
 export const getGetShopsIdMockHandler = (overrideResponse?: Shop | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<Shop> | Shop)) => {
   return http.get('*/shops/:id', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetShopsIdResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -212,9 +212,9 @@ export const getGetShopsIdMockHandler = (overrideResponse?: Shop | ((info: Param
 
 export const getGetItemsMockHandler = (overrideResponse?: GetItems200 | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<GetItems200> | GetItems200)) => {
   return http.get('*/items', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetItemsResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -224,9 +224,9 @@ export const getGetItemsMockHandler = (overrideResponse?: GetItems200 | ((info: 
 
 export const getGetItemsIdMockHandler = (overrideResponse?: Item | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<Item> | Item)) => {
   return http.get('*/items/:id', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetItemsIdResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -236,9 +236,9 @@ export const getGetItemsIdMockHandler = (overrideResponse?: Item | ((info: Param
 
 export const getGetReviewsMockHandler = (overrideResponse?: GetReviews200 | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<GetReviews200> | GetReviews200)) => {
   return http.get('*/reviews', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetReviewsResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -251,7 +251,7 @@ export const getPostReviewsMockHandler = (overrideResponse?: void | ((info: Para
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
@@ -261,16 +261,16 @@ export const getDeleteReviewsIdMockHandler = (overrideResponse?: void | ((info: 
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
 
 export const getGetReleaseInfoMockHandler = (overrideResponse?: ReleaseInfo[] | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ReleaseInfo[]> | ReleaseInfo[])) => {
   return http.get('*/release_info', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetReleaseInfoResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -280,9 +280,9 @@ export const getGetReleaseInfoMockHandler = (overrideResponse?: ReleaseInfo[] | 
 
 export const getGetReleaseInfoIdMockHandler = (overrideResponse?: ReleaseInfo | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<ReleaseInfo> | ReleaseInfo)) => {
   return http.get('*/release_info/:id', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetReleaseInfoIdResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -292,9 +292,9 @@ export const getGetReleaseInfoIdMockHandler = (overrideResponse?: ReleaseInfo | 
 
 export const getGetFavoriteItemsMockHandler = (overrideResponse?: GetFavoriteItems200 | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<GetFavoriteItems200> | GetFavoriteItems200)) => {
   return http.get('*/favorite_items', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetFavoriteItemsResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -307,16 +307,16 @@ export const getPutFavoriteItemsIdMockHandler = (overrideResponse?: void | ((inf
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
 
 export const getGetCartItemsMockHandler = (overrideResponse?: CartItem[] | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<CartItem[]> | CartItem[])) => {
   return http.get('*/cart_items', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetCartItemsResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -329,7 +329,7 @@ export const getPostCartItemsMockHandler = (overrideResponse?: void | ((info: Pa
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
@@ -339,16 +339,16 @@ export const getDeleteCartItemsIdMockHandler = (overrideResponse?: void | ((info
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }
 
 export const getGetPurchasesMockHandler = (overrideResponse?: GetPurchases200 | ((info: Parameters<Parameters<typeof http.get>[1]>[0]) => Promise<GetPurchases200> | GetPurchases200)) => {
   return http.get('*/purchases', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getGetPurchasesResponseMock()),
       { status: 200,
         headers: { 'Content-Type': 'application/json' }
@@ -358,9 +358,9 @@ export const getGetPurchasesMockHandler = (overrideResponse?: GetPurchases200 | 
 
 export const getPostPurchasesMockHandler = (overrideResponse?: PostPurchases201 | ((info: Parameters<Parameters<typeof http.post>[1]>[0]) => Promise<PostPurchases201> | PostPurchases201)) => {
   return http.post('*/purchases', async (info) => {await delay(1000);
-  
-    return new HttpResponse(JSON.stringify(overrideResponse !== undefined 
-            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse) 
+
+    return new HttpResponse(JSON.stringify(overrideResponse !== undefined
+            ? (typeof overrideResponse === "function" ? await overrideResponse(info) : overrideResponse)
             : getPostPurchasesResponseMock()),
       { status: 201,
         headers: { 'Content-Type': 'application/json' }
@@ -373,7 +373,7 @@ export const getDeletePurchasesIdMockHandler = (overrideResponse?: void | ((info
   if (typeof overrideResponse === 'function') {await overrideResponse(info); }
     return new HttpResponse(null,
       { status: 204,
-        
+
       })
   })
 }

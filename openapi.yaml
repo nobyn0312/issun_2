@@ -61,7 +61,7 @@ paths:
                     type: string
                     example: "ログインもしくはアカウント登録してください"
 
-  /sign_up:
+  /signup:
     post:
       tags:
         - Authentication

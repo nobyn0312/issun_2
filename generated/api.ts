@@ -62,7 +62,7 @@ export const postSignUp = <TData = AxiosResponse<void>>(
     postSignUpBody: PostSignUpBody, options?: AxiosRequestConfig
  ): Promise<TData> => {
     return axios.post(
-      `/sign_up`,
+      `/signup`,
       postSignUpBody,options
     );
   }

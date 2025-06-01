@@ -15,17 +15,20 @@ export default function Home() {
     <>
       <ItemList />
       <Container>
-        <div className="flex flex-wrap justify-center pb-14">
-          {[...Array(24)].map((_, i) => (
-            <ItemCard
-              imageSrc="/images/item_sample.png"
-              brand="UNIQLO"
-              category="tops"
-              price={1980}
-              key={i}
-            />
-          ))}
-        </div>
+      <div className="flex flex-wrap justify-center pb-14">
+  {[...Array(9)].map((_, i) => (
+    <Link key={i} href={`/item/${i}`} legacyBehavior>
+      <a className="block">
+        <ItemCard
+          imageSrc="/images/item_sample.png"
+          brand="UNIQLO"
+          category="tops"
+          price={1980}
+        />
+      </a>
+    </Link>
+  ))}
+</div> 
       </Container>
       <Navigation />
     </>

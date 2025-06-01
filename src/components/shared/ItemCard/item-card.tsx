@@ -17,12 +17,12 @@ export const ItemCard = ({
 }: ItemCardProps) => {
   const priceInt = price.toLocaleString();
   return (
-    <Link
-      href={"#"}
-      className="flex flex-col grow shrink-0 max-w-64 basis-[30vw] w-full"
-    >
+    // <Link
+    //   href={"#"}
+    //   className="flex flex-col grow shrink-0 max-w-64 basis-[30vw] w-full"
+    // >
       <div>
-        <div className="relative w-full aspect-[1/1.3]">
+        <div className="relative w-full aspect-[1/1.3] flex flex-col grow shrink-0 max-w-64 basis-[30vw] w-full">
           <Image
             src={imageSrc}
             alt="item"
@@ -36,6 +36,6 @@ export const ItemCard = ({
           <p className="text-sm font-bold text-orange-500">{priceInt}</p>
         </div>
       </div>
-    </Link>
+    // </Link>
   );
 };
