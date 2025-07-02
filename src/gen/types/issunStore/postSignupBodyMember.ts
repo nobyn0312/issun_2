@@ -6,7 +6,7 @@
  * OpenAPI spec version: 1.0.0
  */
 
-export type PostSignUpBodyMember = {
+export type PostSignupBodyMember = {
   firstName: string;
   firstNameKana: string;
   lastName: string;

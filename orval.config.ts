@@ -5,17 +5,33 @@ import { defineConfig } from "orval";
  * @see https://orval.dev/reference/configuration/overview
  */
 export default defineConfig({
-  petstore: {
+  issunStore: {
     input: {
       target: './openapi.yaml',
     },
-    output: {
-      mode: "split",
-      target: "./generated/api.ts",
-      schemas: "./generated/model",
-      client: "axios-functions",
-      mock: true,
+ output: {
+      mode: 'tags-split',
+      target: './src/gen/tan-stack-query/issunStore',
+      schemas: './src/gen/types/issunStore',
       clean: true,
+      mock: {
+        type: 'msw',
+        delay: false,
+        useExamples: true,
+        generateEachHttpStatus: true,
+      },
+      client: 'react-query',
+      prettier: true,
+      override: {
+        query: {
+          useQuery: true,
+        },
+        mutator: {
+          path: './src/utils/custom-instance.ts',
+          name: 'customInstance',
+        },
+      },
     },
   },
 });
+

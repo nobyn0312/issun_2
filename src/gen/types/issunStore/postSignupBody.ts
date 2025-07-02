@@ -5,8 +5,8 @@
  * ECサイトの一般会員向けAPI
  * OpenAPI spec version: 1.0.0
  */
-import type { PostSignUpBodyMember } from './postSignUpBodyMember';
+import type { PostSignupBodyMember } from './postSignupBodyMember';
 
-export type PostSignUpBody = {
-  member: PostSignUpBodyMember;
+export type PostSignupBody = {
+  member: PostSignupBodyMember;
 };

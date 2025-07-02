@@ -9,8 +9,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import { postSignIn } from "../../../../generated/api";
-import { PostSignInBody } from "../../../../generated/model";
+// import { postSignIn } from "../../../../generated/api";
+// import { PostSignInBody } from "../../../../generated/model";
 
 // バリデーションスキーマ（zod）
 const signInSchema = z.object({
@@ -18,21 +18,18 @@ const signInSchema = z.object({
   password: z.string().min(6, "パスワードは6文字以上で入力してください"),
 });
 
-
 // フォームデータの型
 type SignInForm = z.infer<typeof signInSchema>;
 
 export default function SignInPage() {
   const [error, setError] = useState<string | null>(null);
 
-
-
   const handleLogin = async () => {
     const res = await postSignIn({
       email: "test1@example.com",
-      password: "Test1111"
+      password: "Test1111",
     });
-}
+  };
 
   // react-hook-formのセットアップ
   const {
@@ -43,7 +40,6 @@ export default function SignInPage() {
     mode: "onChange",
     resolver: zodResolver(signInSchema),
   });
-
 
   const onSubmit = async (data: SignInForm) => {
     setError(null); // エラーをリセット
@@ -58,7 +54,6 @@ export default function SignInPage() {
       console.log("ログイン:", response.data);
       // ホームページにリダイレクト
       window.location.href = "/";
-
     } catch (err: any) {
       console.log("エラー:", err.response?.data);
       setError(err.response?.data?.message || "ログインに失敗しました");
